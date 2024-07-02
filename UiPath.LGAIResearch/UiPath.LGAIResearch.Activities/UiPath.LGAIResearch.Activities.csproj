@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net6.0-windows</TargetFrameworks>
+		<RootNamespace>UiPath.LGAIResearch.Activities</RootNamespace>
+		<AssemblyName>UiPath.LGAIResearch.Activities</AssemblyName>
+    <PackageId>UiPath.LGAIResearch.Activities</PackageId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\UiPath.LGAIResearch.Activities.xml</DocumentationFile>
+    <Title>UiPath.LGAIResearch.Activities</Title>
+	<Authors>Charles Kim</Authors>
+	<Company>UiPath Korea </Company>
+	<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Activities.Metadata" Version="6.0.0-20240626.3" PrivateAssets="All" />
+    <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20240619-01" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+	  <ProjectReference Include="..\UiPath.LGAIResearch\UiPath.LGAIResearch.csproj" PrivateAssets="All">
+		  <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+		  <IncludeAssets>UiPath.LGAIResearch.dll</IncludeAssets>
+	  </ProjectReference>
+  </ItemGroup>
+	<PropertyGroup>
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionBuild>2</VersionBuild>
+		<Description>LG AI Research Deep Document Understanding Activity </Description>
+		<PackageIcon>lg-logo.png</PackageIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<VersionBuild>$(VersionBuild)$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
+		<VersionRevision>$([System.Math]::Floor($([MSBuild]::Divide($([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes), 5))))</VersionRevision>
+		<VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>
+		<AssemblyVersion>$(VersionMajor).$(VersionMinor).$(VersionBuild).$(VersionRevision)</AssemblyVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionBuild)</VersionPrefix>
+		<AssemblyVersion>$(VersionMajor).$(VersionMinor).$(VersionBuild)</AssemblyVersion>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.*.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="\\tsclient\UiPathThings\lg-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <Import Project="..\..\Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems" Label="Shared" />
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+		</ItemGroup>
+
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+		</ItemGroup>
+	</Target>
+</Project>
