@@ -3,12 +3,12 @@
     <TargetFrameworks>net6.0;net6.0-windows</TargetFrameworks>
 		<RootNamespace>UiPath.LGAIResearch.Activities</RootNamespace>
 		<AssemblyName>UiPath.LGAIResearch.Activities</AssemblyName>
-    <PackageId>UiPath.LGAIResearch.Activities</PackageId>
+    <PackageId>LGAIResearch.Activities</PackageId>
   </PropertyGroup>
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\UiPath.LGAIResearch.Activities.xml</DocumentationFile>
-    <Title>UiPath.LGAIResearch.Activities</Title>
+    <Title>LGAIResearch.Activities</Title>
 	<Authors>Charles Kim</Authors>
 	<Company>UiPath Korea </Company>
 	<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
@@ -16,6 +16,7 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Activities.Metadata" Version="6.0.0-20240626.3" PrivateAssets="All" />
+    <PackageReference Include="TraceLD.RDKit.CSharp" Version="0.3.0" />
     <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20240619-01" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>

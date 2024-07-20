@@ -14,6 +14,9 @@ using System.Reflection.PortableExecutable;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
+using GraphMolWrap;
+using System.IO;
+
 
 namespace UiPath.LGAIResearch.Activities
 {
@@ -109,10 +112,30 @@ namespace UiPath.LGAIResearch.Activities
         {
             // Inputs
             var timeout = TimeoutMS.Get(context);
+            var filepath = FilePath.Get(context);
 
             // Set a timeout on the execution
             var task = ExecuteWithTimeout(context, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
+
+#if true
+            int idx = 0;
+            foreach (var item in _molecules)
+            {
+                var svgImageFile = Path.Combine(Path.GetDirectoryName(filepath), 
+                    Path.GetFileNameWithoutExtension(filepath) + "_" + idx + ".svg");
+                var m = RWMol.MolFromSmiles(item.Smiles);
+                RDKFuncs.prepareMolForDrawing(m);
+                var view = new MolDraw2DSVG(item.BBox[2], item.BBox[3]);
+                view.drawMolecule(m, Path.GetFileNameWithoutExtension(svgImageFile));
+                view.finishDrawing();
+                using (var w = new StreamWriter(svgImageFile))
+                {
+                    w.Write(view.getDrawingText());
+                    Console.WriteLine($"{svgImageFile} is drawn.");
+                }
+            }
+#endif
 
             // Outputs
             return (ctx) => {
@@ -151,7 +174,7 @@ namespace UiPath.LGAIResearch.Activities
 #if DEBUG
                     Console.WriteLine($"respons Id: {_requestId} estimatedTime: {_estimatedTime}");
 #endif
-                    Console.WriteLine($"요청을 처리하는데 약 {_estimatedTime} 시간이 걸립니다...");
+                    Console.WriteLine($"요청을 처리하는데 약 {_estimatedTime}초가 걸립니다...");
                     await Task.Delay(_estimatedTime * 1000);
 
                     _client.Clear();
@@ -163,6 +186,7 @@ namespace UiPath.LGAIResearch.Activities
                         Console.WriteLine($"Response body: {respGet.body.Substring(0,100)}");
 #endif
                         var jobj2 = JObject.Parse(respGet.body);
+                        int idx = 0;
                         JArray pages = (JArray)jobj2["outputs"];
                         if (pages != null)
                         {
@@ -181,8 +205,11 @@ namespace UiPath.LGAIResearch.Activities
                                             LayoutPreservingMol = (string)mol["layout_preserving_mol"],
                                             PredMol = (string)mol["pred_mol"],
                                             Smiles = (string)mol["smiles"],
-                                            BBox = new int[] { (int)mol["bbox"][0], (int)mol["bbox"][1], (int)mol["bbox"][2], (int)mol["bbox"][3] }
+                                            BBox = new int[] { (int)mol["bbox"][0], (int)mol["bbox"][1], (int)mol["bbox"][2], (int)mol["bbox"][3] },
+                                            SvgImagePath = string.Empty,
+                                            Page = (int)p["page"]
                                         });
+                                        idx++;
                                     }
                                 }
                             }
@@ -203,7 +230,7 @@ namespace UiPath.LGAIResearch.Activities
         }
 
 
-        #endregion
+#endregion
 
 
     }

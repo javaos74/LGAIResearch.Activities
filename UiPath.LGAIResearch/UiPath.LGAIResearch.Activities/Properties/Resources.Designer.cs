@@ -250,6 +250,78 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generate SVG from smiles.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_Description {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GenerateSVGFromSmiles.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endpoint for SVG generation.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_Endpoint_Description {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_Endpoint_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endpoint.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_Endpoint_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_Endpoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smiles (base64 format).
+        /// </summary>
+        public static string GenerateSVGFromSmiles_Smiles_Description {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_Smiles_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smiles.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_Smiles_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_Smiles_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated SVG file path.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_SvgPath_Description {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_SvgPath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SvgPath.
+        /// </summary>
+        public static string GenerateSVGFromSmiles_SvgPath_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateSVGFromSmiles_SvgPath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {
