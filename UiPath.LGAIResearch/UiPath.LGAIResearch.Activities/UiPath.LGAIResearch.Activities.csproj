@@ -16,7 +16,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Activities.Metadata" Version="6.0.0-20240626.3" PrivateAssets="All" />
-    <PackageReference Include="TraceLD.RDKit.CSharp" Version="0.3.0" />
     <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20240619-01" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
@@ -28,7 +27,7 @@
 	<PropertyGroup>
 		<VersionMajor>1</VersionMajor>
 		<VersionMinor>0</VersionMinor>
-		<VersionBuild>2</VersionBuild>
+		<VersionBuild>3</VersionBuild>
 		<Description>LG AI Research Deep Document Understanding Activity </Description>
 		<PackageIcon>lg-logo.png</PackageIcon>
 	</PropertyGroup>

@@ -14,7 +14,6 @@ using System.Reflection.PortableExecutable;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
-using GraphMolWrap;
 using System.IO;
 
 
@@ -118,7 +117,7 @@ namespace UiPath.LGAIResearch.Activities
             var task = ExecuteWithTimeout(context, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
 
-#if true
+#if false  
             int idx = 0;
             foreach (var item in _molecules)
             {
@@ -195,6 +194,7 @@ namespace UiPath.LGAIResearch.Activities
                                 JArray mols = (JArray)p["elements"]["molecule"];
                                 if (mols != null)
                                 {
+                                    idx = 0;
                                     foreach (var mol in mols)
                                     {
 #if DEBUG
@@ -207,7 +207,8 @@ namespace UiPath.LGAIResearch.Activities
                                             Smiles = (string)mol["smiles"],
                                             BBox = new int[] { (int)mol["bbox"][0], (int)mol["bbox"][1], (int)mol["bbox"][2], (int)mol["bbox"][3] },
                                             SvgImagePath = string.Empty,
-                                            Page = (int)p["page"]
+                                            Page = (int)p["page"],
+                                            Seq = idx
                                         });
                                         idx++;
                                     }
