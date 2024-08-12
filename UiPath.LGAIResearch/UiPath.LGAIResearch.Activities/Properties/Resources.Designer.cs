@@ -250,6 +250,186 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ApiKey for EXAONE LLM .
+        /// </summary>
+        public static string GenerateContent_ApiKey_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_ApiKey_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ApiKey.
+        /// </summary>
+        public static string GenerateContent_ApiKey_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_ApiKey_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Chat completion with EXAONE LLM .
+        /// </summary>
+        public static string GenerateContent_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Generation.
+        /// </summary>
+        public static string GenerateContent_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endpoint for EXAONE LLM.
+        /// </summary>
+        public static string GenerateContent_Endpoint_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_Endpoint_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endpoint.
+        /// </summary>
+        public static string GenerateContent_Endpoint_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_Endpoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size of max new token for EXAONE ( default 1024 max 4096).
+        /// </summary>
+        public static string GenerateContent_MaxNewToken_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_MaxNewToken_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MaxNewToken.
+        /// </summary>
+        public static string GenerateContent_MaxNewToken_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_MaxNewToken_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chat completion response .
+        /// </summary>
+        public static string GenerateContent_Response_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_Response_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Response.
+        /// </summary>
+        public static string GenerateContent_Response_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_Response_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System prompt for EXAONE LLM.
+        /// </summary>
+        public static string GenerateContent_SystemPrompt_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_SystemPrompt_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SystemPrompt.
+        /// </summary>
+        public static string GenerateContent_SystemPrompt_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_SystemPrompt_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temperature for EXAONE range from 0 to 1 (default 0.1).
+        /// </summary>
+        public static string GenerateContent_Temperature_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_Temperature_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temperature.
+        /// </summary>
+        public static string GenerateContent_Temperature_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_Temperature_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top K for EXAONE (default 50).
+        /// </summary>
+        public static string GenerateContent_TopK_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_TopK_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TopK.
+        /// </summary>
+        public static string GenerateContent_TopK_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_TopK_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top Probability for EXAONE (default 1).
+        /// </summary>
+        public static string GenerateContent_TopP_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_TopP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TopP.
+        /// </summary>
+        public static string GenerateContent_TopP_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_TopP_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User promprt for content generation with EXAONE LLM.
+        /// </summary>
+        public static string GenerateContent_UserPrompt_Description {
+            get {
+                return ResourceManager.GetString("GenerateContent_UserPrompt_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserPrompt.
+        /// </summary>
+        public static string GenerateContent_UserPrompt_DisplayName {
+            get {
+                return ResourceManager.GetString("GenerateContent_UserPrompt_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generate SVG from smiles.
         /// </summary>
         public static string GenerateSVGFromSmiles_Description {

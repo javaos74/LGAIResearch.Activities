@@ -37,4 +37,25 @@ namespace UiPath.LGAIResearch.Models
         public HttpStatusCode status { get; set; }
         public string body { get; set; }
     }
+
+    public class LGAIExaoneResponse
+    {
+        public HttpStatusCode status { get; set; } = HttpStatusCode.InternalServerError;
+        public string body { get; set; }
+    }
+
+    public class ExaoneMessage
+    {
+        [JsonProperty("role")]
+        public string Role { get; set; }
+
+        [JsonProperty("content")]
+        public string Content { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"role={Role}, content={Content}";
+        }
+    }
 }

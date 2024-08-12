@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AnalyzeDocumentDesigner.xaml" />
+    <None Remove="Designers\GenerateContentDesigner.xaml" />
     <None Remove="Designers\GenerateSVGFromSmilesDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
@@ -71,6 +72,9 @@
     <Page Include="Designers\AnalyzeDocumentDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\GenerateContentDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\GenerateSVGFromSmilesDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

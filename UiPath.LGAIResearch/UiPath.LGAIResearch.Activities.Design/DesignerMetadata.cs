@@ -23,6 +23,10 @@ namespace UiPath.LGAIResearch.Activities.Design
             builder.AddCustomAttributes(typeof(GenerateSVGFromSmiles), new DesignerAttribute(typeof(GenerateSVGFromSmilesDesigner)));
             builder.AddCustomAttributes(typeof(GenerateSVGFromSmiles), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(GenerateContent), categoryAttribute);
+            builder.AddCustomAttributes(typeof(GenerateContent), new DesignerAttribute(typeof(GenerateContentDesigner)));
+            builder.AddCustomAttributes(typeof(GenerateContent), new HelpKeywordAttribute(""));
+
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

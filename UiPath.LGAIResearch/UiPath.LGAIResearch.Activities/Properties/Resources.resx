@@ -241,42 +241,6 @@
     <value />
     <comment>property name</comment>
   </data>
-  <data name="Authentication_Category" xml:space="preserve">
-    <value>Authentication</value>
-    <comment>category</comment>
-  </data>
-  <data name="Common_Category" xml:space="preserve">
-    <value>Common</value>
-    <comment>category</comment>
-  </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
-  </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
-  </data>
-  <data name="Options_Category" xml:space="preserve">
-    <value>Options</value>
-    <comment>category</comment>
-  </data>
-  <data name="ValidationScope_Error" xml:space="preserve">
-    <value>Cannot be used outside of a {0}.</value>
-    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
-  </data>
-  <data name="ValidationValue_Error" xml:space="preserve">
-    <value>Please provide a value for {0}.</value>
-    <comment>error message; {0} is the name of a missing property</comment>
-  </data>
-  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
-    <value>Please provide a value either for {0} or {1}, but not both.</value>
-    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
-  </data>
-  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
-    <value>Please provide values for both {0} and {1}.</value>
-    <comment>error message; {0} &amp; {1} are complementary properties</comment>
-  </data>
   <data name="GenerateSVGFromSmiles_DisplayName" xml:space="preserve">
     <value>GenerateSVGFromSmiles</value>
     <comment>activity name</comment>
@@ -293,10 +257,6 @@
     <value>Smiles (base64 format)</value>
     <comment>property description</comment>
   </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
-  </data>
   <data name="GenerateSVGFromSmiles_Endpoint_DisplayName" xml:space="preserve">
     <value>Endpoint</value>
     <comment>property name</comment>
@@ -304,10 +264,6 @@
   <data name="GenerateSVGFromSmiles_Endpoint_Description" xml:space="preserve">
     <value>Endpoint for SVG generation</value>
     <comment>property description</comment>
-  </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
   </data>
   <data name="GenerateSVGFromSmiles_SvgPath_DisplayName" xml:space="preserve">
     <value>SvgPath</value>
@@ -317,8 +273,84 @@
     <value>Generated SVG file path</value>
     <comment>property description</comment>
   </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
+  <data name="GenerateContent_DisplayName" xml:space="preserve">
+    <value>Content Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="GenerateContent_Description" xml:space="preserve">
+    <value>Generate Chat completion with EXAONE LLM </value>
+    <comment>activity description</comment>
+  </data>
+  <data name="GenerateContent_Endpoint_DisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_Endpoint_Description" xml:space="preserve">
+    <value>Endpoint for EXAONE LLM</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_ApiKey_DisplayName" xml:space="preserve">
+    <value>ApiKey</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_ApiKey_Description" xml:space="preserve">
+    <value>ApiKey for EXAONE LLM </value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_SystemPrompt_DisplayName" xml:space="preserve">
+    <value>SystemPrompt</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_SystemPrompt_Description" xml:space="preserve">
+    <value>System prompt for EXAONE LLM</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_UserPrompt_DisplayName" xml:space="preserve">
+    <value>UserPrompt</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_UserPrompt_Description" xml:space="preserve">
+    <value>User promprt for content generation with EXAONE LLM</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_Temperature_DisplayName" xml:space="preserve">
+    <value>Temperature</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_Temperature_Description" xml:space="preserve">
+    <value>Temperature for EXAONE range from 0 to 1 (default 0.1)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_TopP_DisplayName" xml:space="preserve">
+    <value>TopP</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_TopP_Description" xml:space="preserve">
+    <value>Top Probability for EXAONE (default 1)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_TopK_DisplayName" xml:space="preserve">
+    <value>TopK</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_TopK_Description" xml:space="preserve">
+    <value>Top K for EXAONE (default 50)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_MaxNewToken_DisplayName" xml:space="preserve">
+    <value>MaxNewToken</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_MaxNewToken_Description" xml:space="preserve">
+    <value>Size of max new token for EXAONE ( default 1024 max 4096)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GenerateContent_Response_DisplayName" xml:space="preserve">
+    <value>Response</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GenerateContent_Response_Description" xml:space="preserve">
+    <value>Chat completion response </value>
+    <comment>property description</comment>
   </data>
 </root>
