@@ -27,6 +27,10 @@ namespace UiPath.LGAIResearch.Activities.Design
             builder.AddCustomAttributes(typeof(GenerateContent), new DesignerAttribute(typeof(GenerateContentDesigner)));
             builder.AddCustomAttributes(typeof(GenerateContent), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(GetResult), categoryAttribute);
+            builder.AddCustomAttributes(typeof(GetResult), new DesignerAttribute(typeof(GetResultDesigner)));
+            builder.AddCustomAttributes(typeof(GetResult), new HelpKeywordAttribute(""));
+
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

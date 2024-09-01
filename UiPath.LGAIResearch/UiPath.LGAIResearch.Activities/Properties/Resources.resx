@@ -210,7 +210,7 @@
     <comment>property description</comment>
   </data>
   <data name="AnalyzeDocument_Molecules_DisplayName" xml:space="preserve">
-    <value>Molecules</value>
+    <value>Moleculars</value>
     <comment>property name</comment>
   </data>
   <data name="AnalyzeDocument_Molecules_Description" xml:space="preserve">
@@ -234,11 +234,11 @@
     <comment>property name</comment>
   </data>
   <data name="AnalyzeDocument_EstimatedTime_Description" xml:space="preserve">
-    <value />
+    <value>Estimated time for result</value>
     <comment>activity description</comment>
   </data>
   <data name="AnalyzeDocument_EstimatedTime_DisplayName" xml:space="preserve">
-    <value />
+    <value>EstimatedTIme</value>
     <comment>property name</comment>
   </data>
   <data name="GenerateSVGFromSmiles_DisplayName" xml:space="preserve">
@@ -351,6 +351,54 @@
   </data>
   <data name="GenerateContent_Response_Description" xml:space="preserve">
     <value>Chat completion response </value>
+    <comment>property description</comment>
+  </data>
+  <data name="GetResult_DisplayName" xml:space="preserve">
+    <value>Get DDU Result</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="GetResult_Description" xml:space="preserve">
+    <value>Retrive results for AnalyzeDocument</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="GetResult_Endpoint_DisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GetResult_Endpoint_Description" xml:space="preserve">
+    <value>LGAI DDU model endpoint </value>
+    <comment>property description</comment>
+  </data>
+  <data name="GetResult_ApiKey_DisplayName" xml:space="preserve">
+    <value>ApiKey</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GetResult_ApiKey_Description" xml:space="preserve">
+    <value>LGAI DDU model Api Key</value>
+    <comment>property description</comment>
+  </data>
+  <data name="GetResult_RequestId_DisplayName" xml:space="preserve">
+    <value>RequestId</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GetResult_RequestId_Description" xml:space="preserve">
+    <value>Result of LGAI DDU Analyze Document Activity </value>
+    <comment>property description</comment>
+  </data>
+  <data name="GetResult_DDUData_DisplayName" xml:space="preserve">
+    <value>Moleculars</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GetResult_DDUData_Description" xml:space="preserve">
+    <value>Extracted Document Elements Information </value>
+    <comment>property description</comment>
+  </data>
+  <data name="GetResult_ErrorMessage_DisplayName" xml:space="preserve">
+    <value>Error Message</value>
+    <comment>property name</comment>
+  </data>
+  <data name="GetResult_ErrorMessage_Description" xml:space="preserve">
+    <value>Error message </value>
     <comment>property description</comment>
   </data>
 </root>

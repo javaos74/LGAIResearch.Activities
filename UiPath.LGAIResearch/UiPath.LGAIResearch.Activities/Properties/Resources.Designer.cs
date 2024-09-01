@@ -133,7 +133,7 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Estimated time for result.
         /// </summary>
         public static string AnalyzeDocument_EstimatedTime_Description {
             get {
@@ -142,7 +142,7 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to EstimatedTIme.
         /// </summary>
         public static string AnalyzeDocument_EstimatedTime_DisplayName {
             get {
@@ -178,7 +178,7 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Molecules.
+        ///   Looks up a localized string similar to Moleculars.
         /// </summary>
         public static string AnalyzeDocument_Molecules_DisplayName {
             get {
@@ -498,6 +498,114 @@ namespace UiPath.LGAIResearch.Activities.Properties {
         public static string GenerateSVGFromSmiles_SvgPath_DisplayName {
             get {
                 return ResourceManager.GetString("GenerateSVGFromSmiles_SvgPath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LGAI DDU model Api Key.
+        /// </summary>
+        public static string GetResult_ApiKey_Description {
+            get {
+                return ResourceManager.GetString("GetResult_ApiKey_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ApiKey.
+        /// </summary>
+        public static string GetResult_ApiKey_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_ApiKey_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extracted Document Elements Information .
+        /// </summary>
+        public static string GetResult_DDUData_Description {
+            get {
+                return ResourceManager.GetString("GetResult_DDUData_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moleculars.
+        /// </summary>
+        public static string GetResult_DDUData_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_DDUData_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrive results for AnalyzeDocument.
+        /// </summary>
+        public static string GetResult_Description {
+            get {
+                return ResourceManager.GetString("GetResult_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get DDU Result.
+        /// </summary>
+        public static string GetResult_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LGAI DDU model endpoint .
+        /// </summary>
+        public static string GetResult_Endpoint_Description {
+            get {
+                return ResourceManager.GetString("GetResult_Endpoint_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endpoint.
+        /// </summary>
+        public static string GetResult_Endpoint_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_Endpoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error message .
+        /// </summary>
+        public static string GetResult_ErrorMessage_Description {
+            get {
+                return ResourceManager.GetString("GetResult_ErrorMessage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error Message.
+        /// </summary>
+        public static string GetResult_ErrorMessage_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_ErrorMessage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result of LGAI DDU Analyze Document Activity .
+        /// </summary>
+        public static string GetResult_RequestId_Description {
+            get {
+                return ResourceManager.GetString("GetResult_RequestId_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RequestId.
+        /// </summary>
+        public static string GetResult_RequestId_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_RequestId_DisplayName", resourceCulture);
             }
         }
         

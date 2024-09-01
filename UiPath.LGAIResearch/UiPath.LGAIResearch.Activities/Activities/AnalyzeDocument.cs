@@ -58,13 +58,12 @@ namespace UiPath.LGAIResearch.Activities
         [LocalizedDisplayName(nameof(Resources.AnalyzeDocument_RequestId_DisplayName))]
         [LocalizedDescription(nameof(Resources.AnalyzeDocument_RequestId_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
-        [Browsable(false)]
         public OutArgument<string> RequestId { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.AnalyzeDocument_Molecules_DisplayName))]
         [LocalizedDescription(nameof(Resources.AnalyzeDocument_Molecules_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
-        public OutArgument<LGAIDDU[]> Molecules { get; set; }
+        public OutArgument<LGAIDDU[]> Moleculars { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.AnalyzeDocument_ErrorStatus_DisplayName))]
         [LocalizedDescription(nameof(Resources.AnalyzeDocument_ErrorStatus_Description))]
@@ -78,7 +77,7 @@ namespace UiPath.LGAIResearch.Activities
         public OutArgument<int> EstimatedTime { get; set; }
         #endregion
 
-        private List<LGAIDDU> _molecules;
+        private List<LGAIDDU> _moleculars;
         private string _requestId;
         private int _estimatedTime;
         private string _errorStatus;
@@ -89,7 +88,7 @@ namespace UiPath.LGAIResearch.Activities
         public AnalyzeDocument()
         {
             _requestId = string.Empty;
-            _molecules = new List<LGAIDDU>();
+            _moleculars = new List<LGAIDDU>();
             _estimatedTime = -1;
             _errorStatus = "OK";
         }
@@ -140,7 +139,7 @@ namespace UiPath.LGAIResearch.Activities
             return (ctx) => {
                 RequestId.Set(ctx, this._requestId);
                 ErrorStatus.Set(ctx, this._errorStatus);
-                Molecules.Set(ctx, this._molecules.ToArray());
+                Moleculars.Set(ctx, this._moleculars.ToArray());
                 EstimatedTime.Set(ctx, this._estimatedTime);    
             };
         }
@@ -180,9 +179,9 @@ namespace UiPath.LGAIResearch.Activities
                     var respGet = await _client.Get(_requestId);
                     if( respGet.status == System.Net.HttpStatusCode.OK)
                     {
-                        _molecules.Clear();
+                        _moleculars.Clear();
 #if DEBUG
-                        Console.WriteLine($"Response body: {respGet.body.Substring(0,100)}");
+                        Console.WriteLine($"Response body: {respGet.body.Substring(0,Math.Min(100, respGet.body.Length))}");
 #endif
                         var jobj2 = JObject.Parse(respGet.body);
                         int idx = 0;
@@ -200,7 +199,7 @@ namespace UiPath.LGAIResearch.Activities
 #if DEBUG
                                         Console.WriteLine($"pred_mol: {mol["pred_mol"]}");
 #endif
-                                        _molecules.Add(new LGAIDDU
+                                        _moleculars.Add(new LGAIDDU
                                         {
                                             LayoutPreservingMol = (string)mol["layout_preserving_mol"],
                                             PredMol = (string)mol["pred_mol"],
